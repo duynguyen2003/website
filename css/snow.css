@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    background-color: #e5e5e6;
+}
+
+.snow-container ,.leaf-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Không cho phép tương tác với bông tuyết */
+}
+
+.snow ,.leaf{
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none; /* Không cho phép tương tác với bông tuyết */
+    will-change: transform;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
